@@ -76,7 +76,7 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "NASA_API_KEY"
+            key = "API_KEY"
             value = "***REMOVED***"
             isEnabled = "YES">
          </EnvironmentVariable>

@@ -10,7 +10,7 @@ import Foundation
 class APODViewModel: ObservableObject {
     @Published var apod: APOD?
     @Published var isLoading = false
-    private let apiKey = "***REMOVED***"
+    private let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
     private let favoritesManager = FavoritesManager()
     
     func fetchAPOD() {

@@ -1,0 +1,40 @@
+# Xcode and macOS
+xcuserdata/
+DerivedData/
+.idea/
+*.hmap
+*.swp
+*.xcuserstate
+
+# Build artifacts
+*.ipa
+*.app.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Swift Package Manager
+.build/
+
+# Swift Packages
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/xcode
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# Environment variables or secret files
+.env
+Secrets.xcconfig
+Secrets.plist
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
