@@ -7,30 +7,36 @@
 
 import Foundation
 
-class FavoritesManager {
+class FavoritesManager: ObservableObject {
     static let shared = FavoritesManager()
+    @Published private var favoritedApods: [APOD] = []
     private let favoritesKey = "Favorites"
     
+    init() {
+        loadFavorites()
+    }
+    
     func saveFavorite(apod: APOD) {
-        var favorites = loadFavorites()
-        if !favorites.contains(apod) {
-            favorites.append(apod)
-            save(favorites: favorites)
+        if !favoritedApods.contains(where: { $0.id == apod.id }) {
+            favoritedApods.append(apod)
+            save(favorites: favoritedApods)
         }
     }
     
     func removeFavorite(apod: APOD) {
-        var favorites = loadFavorites()
-        favorites.removeAll { $0.id == apod.id }
-        save(favorites: favorites)
+        favoritedApods.removeAll { $0.id == apod.id }
+        save(favorites: favoritedApods)
     }
     
-    func loadFavorites() -> [APOD] {
+    func loadFavorites() {
         if let favoritesData = UserDefaults.standard.data(forKey: favoritesKey),
            let favorites = try? JSONDecoder().decode([APOD].self, from: favoritesData) {
-            return favorites
+            self.favoritedApods = favorites
         }
-        return []
+    }
+    
+    func getFavorites() -> [APOD] {
+        return favoritedApods
     }
     
     private func save(favorites: [APOD]) {
@@ -38,5 +44,11 @@ class FavoritesManager {
             UserDefaults.standard.set(favoritesData, forKey: favoritesKey)
         }
     }
+    
+    func isFavorite(apod: APOD) -> Bool {
+        return favoritedApods.contains(where: { $0.id == apod.id })
+    }
 }
+
+
 

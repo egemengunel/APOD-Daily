@@ -14,59 +14,77 @@ struct CurrentAPODView: View {
     @State private var saveError: NSError?
 
     var body: some View {
-        VStack {
-            if let apod = viewModel.apod, let imageUrl = URL(string: apod.url) {
-                AsyncImage(url: imageUrl) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView()
-                    case .success(let image):
-                        image.resizable()
-                             .aspectRatio(contentMode: .fit)
-                    case .failure:
-                        Text("Failed to load image.")
-                    @unknown default:
-                        EmptyView()
+        ScrollView {
+            VStack {
+                if let apod = viewModel.apod, let imageUrl = URL(string: apod.url) {
+                    // APOD Image
+                    AsyncImage(url: imageUrl) { phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: .infinity)
+                        case .failure:
+                            Text("Failed to load image.")
+                                .foregroundColor(.red)
+                        @unknown default:
+                            EmptyView()
+                        }
                     }
-                }
-                .frame(maxWidth: .infinity)
-                
-                Text(apod.title)
-                    .font(.title)
-                    .padding()
 
-                ScrollView {
+                    // APOD Title
+                    Text(apod.title)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding([.top, .horizontal])
+
+                    // APOD Explanation
                     Text(apod.explanation)
-                        .padding()
-                }
+                        .font(.body)
+                        .padding(.horizontal)
 
-                HStack {
-                    Button(action: {
+                    // Favorite and Share Buttons
+                    HStack {
+                        Spacer()
+                        Button(action: {
                             viewModel.toggleFavoriteStatus()
                         }) {
-                            
                             Image(systemName: viewModel.apod?.isFavorite == true ? "heart.fill" : "heart")
+                                .font(.title2)
                                 .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
+                                .background(Color.gray.opacity(0.1))
                                 .clipShape(Circle())
+                                .foregroundColor(viewModel.apod?.isFavorite == true ? .red : .blue)
                         }
-                    
-                    Button("Save to Photos") {
-                        saveImageToPhotos(url: apod.hdurl)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            if let currentApod = viewModel.apod {
+                                saveImageToPhotos(url: currentApod.hdurl)
+                            }
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(.title2)
+                                .padding()
+                                .background(Color.gray.opacity(0.1))
+                                .clipShape(Circle())
+                                .foregroundColor(.blue)
+                        }
+                        Spacer()
                     }
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
+                } else if viewModel.isLoading {
+                    ProgressView()
+                } else {
+                    Text("No APOD available.")
+                        .padding()
                 }
-            } else if viewModel.isLoading {
-                ProgressView()
             }
-
-            Spacer()
         }
-        .navigationTitle("APOD")
         .alert(isPresented: $showingSaveAlert) {
             Alert(
                 title: Text("Save Image"),
@@ -87,7 +105,7 @@ struct CurrentAPODView: View {
             self.showingSaveAlert = true
             return
         }
-        
+
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.creationRequestForAsset(from: image)
         }) { success, error in
@@ -100,11 +118,5 @@ struct CurrentAPODView: View {
                 self.showingSaveAlert = true
             }
         }
-    }
-}
-
-struct CurrentAPODView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrentAPODView()
     }
 }

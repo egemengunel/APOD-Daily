@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088BC48D2CD6491B00454C6E /* PreviousAPODsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */; };
 		08983A902B10FA1600A2BE79 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */; };
 		08A947882B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */; };
 		08A9478A2B0DFA050012F3E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947892B0DFA050012F3E2 /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAPODsView.swift; sourceTree = "<group>"; };
 		08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		08A947842B0DFA050012F3E2 /* Daily APOD Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily APOD Wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperApp.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				08A947B32B0DFD580012F3E2 /* APODViewModel.swift */,
 				08A9478B2B0DFA070012F3E2 /* Assets.xcassets */,
 				08A9478D2B0DFA070012F3E2 /* Preview Content */,
+				088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */,
 			);
 			path = "Daily APOD Wallpaper";
 			sourceTree = "<group>";
@@ -206,7 +209,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					08A947832B0DFA050012F3E2 = {
 						CreatedOnToolsVersion = 15.0;
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DB888E2B10524400341B4E /* CurrentAPODView.swift in Sources */,
+				088BC48D2CD6491B00454C6E /* PreviousAPODsView.swift in Sources */,
 				08A9478A2B0DFA050012F3E2 /* ContentView.swift in Sources */,
 				08A947B22B0DFC670012F3E2 /* APOD.swift in Sources */,
 				08983A902B10FA1600A2BE79 /* FavoritesManager.swift in Sources */,
@@ -497,7 +501,6 @@
 		08A947AC2B0DFA070012F3E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -517,7 +520,6 @@
 		08A947AD2B0DFA070012F3E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -537,7 +539,6 @@
 		08A947AF2B0DFA070012F3E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98B33LU3AU;
@@ -555,7 +556,6 @@
 		08A947B02B0DFA070012F3E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98B33LU3AU;

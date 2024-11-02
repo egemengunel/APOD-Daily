@@ -11,7 +11,7 @@ class APODViewModel: ObservableObject {
     @Published var apod: APOD?
     @Published var isLoading = false
     private let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
-    private let favoritesManager = FavoritesManager()
+    private let favoritesManager = FavoritesManager.shared
     
     func fetchAPOD() {
         isLoading = true
@@ -24,40 +24,27 @@ class APODViewModel: ObservableObject {
                 if let data = data {
                     let decoder = JSONDecoder()
                     if let decodedResponse = try? decoder.decode(APOD.self, from: data) {
-                        self?.apod = decodedResponse
+                        var fetchedApod = decodedResponse
+                        // Check if fetched APOD is in favorites, then set isFavorite accordingly
+                        fetchedApod.isFavorite = self?.favoritesManager.isFavorite(apod: fetchedApod) ?? false
+                        self?.apod = fetchedApod
                     }
                 }
             }
         }.resume()
     }
-    func addFavorite() {
-        guard var currentApod = apod else { return }
-                currentApod.isFavorite = true // Set the favorite flag
-                apod = currentApod // Assign the updated APOD back to @Published property
-                favoritesManager.saveFavorite(apod: currentApod) // Save to Favorites
-    }
-    func removeFavorite() {
-            guard var currentApod = apod else { return }
-            currentApod.isFavorite = false // Unset the favorite flag
-            apod = currentApod // Assign the updated APOD back to @Published property
-            favoritesManager.removeFavorite(apod: currentApod) // Remove from Favorites
-        }
-    func loadFavorites() {
-           let favorites = favoritesManager.loadFavorites()
-           // Do something with the loaded favorites, e.g., check if the current APOD is favorited
-           if let currentApod = apod, favorites.contains(currentApod) {
-               self.apod?.isFavorite = true
-        }
-    }
+    
     func toggleFavoriteStatus() {
-            guard let currentApod = apod else { return }
-            apod?.isFavorite.toggle() // Toggle the isFavorite property
-
-            if currentApod.isFavorite {
-                favoritesManager.saveFavorite(apod: currentApod)
-            } else {
-                favoritesManager.removeFavorite(apod: currentApod)
-            }
+        guard var currentApod = apod else { return }
+        currentApod.isFavorite.toggle()
+        apod = currentApod // Update published property to refresh the view
+        
+        if currentApod.isFavorite {
+            favoritesManager.saveFavorite(apod: currentApod)
+        } else {
+            favoritesManager.removeFavorite(apod: currentApod)
         }
+    }
 }
+
 
