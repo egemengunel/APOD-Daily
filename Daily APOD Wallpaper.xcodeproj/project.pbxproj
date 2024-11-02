@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08983A902B10FA1600A2BE79 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */; };
+		08A947882B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */; };
+		08A9478A2B0DFA050012F3E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947892B0DFA050012F3E2 /* ContentView.swift */; };
+		08A9478C2B0DFA070012F3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A9478B2B0DFA070012F3E2 /* Assets.xcassets */; };
+		08A9478F2B0DFA070012F3E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A9478E2B0DFA070012F3E2 /* Preview Assets.xcassets */; };
+		08A947992B0DFA070012F3E2 /* Daily_APOD_WallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947982B0DFA070012F3E2 /* Daily_APOD_WallpaperTests.swift */; };
+		08A947A32B0DFA070012F3E2 /* Daily_APOD_WallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947A22B0DFA070012F3E2 /* Daily_APOD_WallpaperUITests.swift */; };
+		08A947A52B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947A42B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift */; };
+		08A947B22B0DFC670012F3E2 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947B12B0DFC670012F3E2 /* APOD.swift */; };
+		08A947B42B0DFD580012F3E2 /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947B32B0DFD580012F3E2 /* APODViewModel.swift */; };
+		08DB888E2B10524400341B4E /* CurrentAPODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB888D2B10524400341B4E /* CurrentAPODView.swift */; };
+		08DB88902B1052F000341B4E /* FavoritedAPODsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08A947952B0DFA070012F3E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08A9477C2B0DFA050012F3E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08A947832B0DFA050012F3E2;
+			remoteInfo = "Daily APOD Wallpaper";
+		};
+		08A9479F2B0DFA070012F3E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08A9477C2B0DFA050012F3E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08A947832B0DFA050012F3E2;
+			remoteInfo = "Daily APOD Wallpaper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		08A947842B0DFA050012F3E2 /* Daily APOD Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily APOD Wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperApp.swift; sourceTree = "<group>"; };
+		08A947892B0DFA050012F3E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08A9478B2B0DFA070012F3E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08A9478E2B0DFA070012F3E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08A947942B0DFA070012F3E2 /* Daily APOD WallpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily APOD WallpaperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A947982B0DFA070012F3E2 /* Daily_APOD_WallpaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperTests.swift; sourceTree = "<group>"; };
+		08A9479E2B0DFA070012F3E2 /* Daily APOD WallpaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily APOD WallpaperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A947A22B0DFA070012F3E2 /* Daily_APOD_WallpaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperUITests.swift; sourceTree = "<group>"; };
+		08A947A42B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08A947B12B0DFC670012F3E2 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		08A947B32B0DFD580012F3E2 /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
+		08DB888D2B10524400341B4E /* CurrentAPODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAPODView.swift; sourceTree = "<group>"; };
+		08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedAPODsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08A947812B0DFA050012F3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A947912B0DFA070012F3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A9479B2B0DFA070012F3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08A9477B2B0DFA050012F3E2 = {
+			isa = PBXGroup;
+			children = (
+				08A947862B0DFA050012F3E2 /* Daily APOD Wallpaper */,
+				08A947972B0DFA070012F3E2 /* Daily APOD WallpaperTests */,
+				08A947A12B0DFA070012F3E2 /* Daily APOD WallpaperUITests */,
+				08A947852B0DFA050012F3E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08A947852B0DFA050012F3E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08A947842B0DFA050012F3E2 /* Daily APOD Wallpaper.app */,
+				08A947942B0DFA070012F3E2 /* Daily APOD WallpaperTests.xctest */,
+				08A9479E2B0DFA070012F3E2 /* Daily APOD WallpaperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08A947862B0DFA050012F3E2 /* Daily APOD Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */,
+				08A947892B0DFA050012F3E2 /* ContentView.swift */,
+				08DB888D2B10524400341B4E /* CurrentAPODView.swift */,
+				08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */,
+				08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */,
+				08A947B12B0DFC670012F3E2 /* APOD.swift */,
+				08A947B32B0DFD580012F3E2 /* APODViewModel.swift */,
+				08A9478B2B0DFA070012F3E2 /* Assets.xcassets */,
+				08A9478D2B0DFA070012F3E2 /* Preview Content */,
+			);
+			path = "Daily APOD Wallpaper";
+			sourceTree = "<group>";
+		};
+		08A9478D2B0DFA070012F3E2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				08A9478E2B0DFA070012F3E2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08A947972B0DFA070012F3E2 /* Daily APOD WallpaperTests */ = {
+			isa = PBXGroup;
+			children = (
+				08A947982B0DFA070012F3E2 /* Daily_APOD_WallpaperTests.swift */,
+			);
+			path = "Daily APOD WallpaperTests";
+			sourceTree = "<group>";
+		};
+		08A947A12B0DFA070012F3E2 /* Daily APOD WallpaperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				08A947A22B0DFA070012F3E2 /* Daily_APOD_WallpaperUITests.swift */,
+				08A947A42B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift */,
+			);
+			path = "Daily APOD WallpaperUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08A947832B0DFA050012F3E2 /* Daily APOD Wallpaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08A947A82B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD Wallpaper" */;
+			buildPhases = (
+				08A947802B0DFA050012F3E2 /* Sources */,
+				08A947812B0DFA050012F3E2 /* Frameworks */,
+				08A947822B0DFA050012F3E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily APOD Wallpaper";
+			productName = "Daily APOD Wallpaper";
+			productReference = 08A947842B0DFA050012F3E2 /* Daily APOD Wallpaper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08A947932B0DFA070012F3E2 /* Daily APOD WallpaperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08A947AB2B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD WallpaperTests" */;
+			buildPhases = (
+				08A947902B0DFA070012F3E2 /* Sources */,
+				08A947912B0DFA070012F3E2 /* Frameworks */,
+				08A947922B0DFA070012F3E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08A947962B0DFA070012F3E2 /* PBXTargetDependency */,
+			);
+			name = "Daily APOD WallpaperTests";
+			productName = "Daily APOD WallpaperTests";
+			productReference = 08A947942B0DFA070012F3E2 /* Daily APOD WallpaperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		08A9479D2B0DFA070012F3E2 /* Daily APOD WallpaperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08A947AE2B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD WallpaperUITests" */;
+			buildPhases = (
+				08A9479A2B0DFA070012F3E2 /* Sources */,
+				08A9479B2B0DFA070012F3E2 /* Frameworks */,
+				08A9479C2B0DFA070012F3E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08A947A02B0DFA070012F3E2 /* PBXTargetDependency */,
+			);
+			name = "Daily APOD WallpaperUITests";
+			productName = "Daily APOD WallpaperUITests";
+			productReference = 08A9479E2B0DFA070012F3E2 /* Daily APOD WallpaperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08A9477C2B0DFA050012F3E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					08A947832B0DFA050012F3E2 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					08A947932B0DFA070012F3E2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 08A947832B0DFA050012F3E2;
+					};
+					08A9479D2B0DFA070012F3E2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 08A947832B0DFA050012F3E2;
+					};
+				};
+			};
+			buildConfigurationList = 08A9477F2B0DFA050012F3E2 /* Build configuration list for PBXProject "Daily APOD Wallpaper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08A9477B2B0DFA050012F3E2;
+			productRefGroup = 08A947852B0DFA050012F3E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08A947832B0DFA050012F3E2 /* Daily APOD Wallpaper */,
+				08A947932B0DFA070012F3E2 /* Daily APOD WallpaperTests */,
+				08A9479D2B0DFA070012F3E2 /* Daily APOD WallpaperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08A947822B0DFA050012F3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A9478F2B0DFA070012F3E2 /* Preview Assets.xcassets in Resources */,
+				08A9478C2B0DFA070012F3E2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A947922B0DFA070012F3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A9479C2B0DFA070012F3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08A947802B0DFA050012F3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DB888E2B10524400341B4E /* CurrentAPODView.swift in Sources */,
+				08A9478A2B0DFA050012F3E2 /* ContentView.swift in Sources */,
+				08A947B22B0DFC670012F3E2 /* APOD.swift in Sources */,
+				08983A902B10FA1600A2BE79 /* FavoritesManager.swift in Sources */,
+				08DB88902B1052F000341B4E /* FavoritedAPODsView.swift in Sources */,
+				08A947B42B0DFD580012F3E2 /* APODViewModel.swift in Sources */,
+				08A947882B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A947902B0DFA070012F3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A947992B0DFA070012F3E2 /* Daily_APOD_WallpaperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08A9479A2B0DFA070012F3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A947A32B0DFA070012F3E2 /* Daily_APOD_WallpaperUITests.swift in Sources */,
+				08A947A52B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08A947962B0DFA070012F3E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08A947832B0DFA050012F3E2 /* Daily APOD Wallpaper */;
+			targetProxy = 08A947952B0DFA070012F3E2 /* PBXContainerItemProxy */;
+		};
+		08A947A02B0DFA070012F3E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08A947832B0DFA050012F3E2 /* Daily APOD Wallpaper */;
+			targetProxy = 08A9479F2B0DFA070012F3E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08A947A62B0DFA070012F3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		08A947A72B0DFA070012F3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08A947A92B0DFA070012F3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Daily APOD Wallpaper/Preview Content\"";
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves APOD images to your Photos library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-Wallpaper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08A947AA2B0DFA070012F3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Daily APOD Wallpaper/Preview Content\"";
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves APOD images to your Photos library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-Wallpaper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		08A947AC2B0DFA070012F3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-WallpaperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daily APOD Wallpaper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Daily APOD Wallpaper";
+			};
+			name = Debug;
+		};
+		08A947AD2B0DFA070012F3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-WallpaperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daily APOD Wallpaper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Daily APOD Wallpaper";
+			};
+			name = Release;
+		};
+		08A947AF2B0DFA070012F3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-WallpaperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Daily APOD Wallpaper";
+			};
+			name = Debug;
+		};
+		08A947B02B0DFA070012F3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98B33LU3AU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EgemenGunel.Daily-APOD-WallpaperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Daily APOD Wallpaper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08A9477F2B0DFA050012F3E2 /* Build configuration list for PBXProject "Daily APOD Wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A947A62B0DFA070012F3E2 /* Debug */,
+				08A947A72B0DFA070012F3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08A947A82B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD Wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A947A92B0DFA070012F3E2 /* Debug */,
+				08A947AA2B0DFA070012F3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08A947AB2B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD WallpaperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A947AC2B0DFA070012F3E2 /* Debug */,
+				08A947AD2B0DFA070012F3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08A947AE2B0DFA070012F3E2 /* Build configuration list for PBXNativeTarget "Daily APOD WallpaperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A947AF2B0DFA070012F3E2 /* Debug */,
+				08A947B02B0DFA070012F3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08A9477C2B0DFA050012F3E2 /* Project object */;
+}
