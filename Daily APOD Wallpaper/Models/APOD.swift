@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct APOD: Codable, Identifiable,Equatable {
-    let id: UUID = UUID()
+struct APOD: Codable, Identifiable, Equatable {
+    var id: String { date }
     let date: String
     let explanation: String
     let hdurl: String

@@ -36,14 +36,16 @@ class APODViewModel: ObservableObject {
     
     func toggleFavoriteStatus() {
         guard var currentApod = apod else { return }
-        currentApod.isFavorite.toggle()
-        apod = currentApod // Update published property to refresh the view
+        let newFavoriteStatus = !favoritesManager.isFavorite(apod: currentApod)
+        currentApod.isFavorite = newFavoriteStatus
         
-        if currentApod.isFavorite {
+        if newFavoriteStatus {
             favoritesManager.saveFavorite(apod: currentApod)
         } else {
             favoritesManager.removeFavorite(apod: currentApod)
         }
+        
+        apod = currentApod
     }
 }
 

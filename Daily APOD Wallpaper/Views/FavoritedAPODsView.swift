@@ -11,32 +11,45 @@ struct FavoritedAPODsView: View {
     @ObservedObject private var favoritesManager = FavoritesManager.shared
 
     var body: some View {
-        List {
-            ForEach(favoritesManager.getFavorites(), id: \.id) { apod in
-                NavigationLink(destination: DetailView(apod: apod)) {
-                    VStack(alignment: .leading) {
-                        Text(apod.title)
-                            .font(.headline)
-                        Text(apod.explanation)
-                            .font(.subheadline)
-                            .lineLimit(3)
-                            .foregroundColor(.secondary)
+        NavigationView {
+            List {
+                ForEach(favoritesManager.getFavorites()) { apod in
+                    NavigationLink {
+                        DetailAPODView(apod: apod)
+                    } label: {
+                        APODRowView(apod: apod)
                     }
-                    .padding(.vertical, 4)
                 }
             }
+            .navigationTitle("Favorites")
         }
-        .navigationTitle("Favorites")
     }
 }
 
-struct DetailView: View {
+struct APODRowView: View {
     let apod: APOD
     
     var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(apod.title)
+                .font(.headline)
+            Text(apod.explanation)
+                .font(.subheadline)
+                .lineLimit(2)
+                .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 4)
+    }
+}
+
+struct DetailAPODView: View {
+    let apod: APOD
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
+    
+    var body: some View {
         ScrollView {
-            VStack {
-                if let imageUrl = URL(string: apod.url) {
+            VStack(spacing: 16) {
+                if let imageUrl = URL(string: apod.hdurl) {
                     AsyncImage(url: imageUrl) { phase in
                         switch phase {
                         case .empty:
@@ -45,26 +58,31 @@ struct DetailView: View {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
                         case .failure:
-                            Text("Failed to load image.")
-                                .foregroundColor(.red)
+                            Image(systemName: "photo.fill")
+                                .foregroundColor(.gray)
                         @unknown default:
                             EmptyView()
                         }
                     }
                 }
                 
-                Text(apod.title)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-
-                Text(apod.explanation)
-                    .padding()
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(apod.title)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Text(apod.date)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    
+                    Text(apod.explanation)
+                        .font(.body)
+                }
+                .padding(.horizontal)
             }
-            .navigationTitle("APOD Details")
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -17,14 +17,16 @@ class FavoritesManager: ObservableObject {
     }
     
     func saveFavorite(apod: APOD) {
-        if !favoritedApods.contains(where: { $0.id == apod.id }) {
-            favoritedApods.append(apod)
+        if !favoritedApods.contains(where: { $0.date == apod.date }) {
+            var updatedApod = apod
+            updatedApod.isFavorite = true
+            favoritedApods.append(updatedApod)
             save(favorites: favoritedApods)
         }
     }
     
     func removeFavorite(apod: APOD) {
-        favoritedApods.removeAll { $0.id == apod.id }
+        favoritedApods.removeAll { $0.date == apod.date }
         save(favorites: favoritedApods)
     }
     
@@ -46,7 +48,7 @@ class FavoritesManager: ObservableObject {
     }
     
     func isFavorite(apod: APOD) -> Bool {
-        return favoritedApods.contains(where: { $0.id == apod.id })
+        return favoritedApods.contains(where: { $0.date == apod.date })
     }
 }
 
