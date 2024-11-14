@@ -83,6 +83,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0847BE732CE6764D00FD360B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08A947B12B0DFC670012F3E2 /* APOD.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0847BE742CE6766A00FD360B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08A947892B0DFA050012F3E2 /* ContentView.swift */,
+				08DB888D2B10524400341B4E /* CurrentAPODView.swift */,
+				08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */,
+				088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0847BE752CE6768E00FD360B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				08A947B32B0DFD580012F3E2 /* APODViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0847BE762CE676A000FD360B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		08A9477B2B0DFA050012F3E2 = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				08A947872B0DFA050012F3E2 /* Daily_APOD_WallpaperApp.swift */,
-				08A947892B0DFA050012F3E2 /* ContentView.swift */,
-				08DB888D2B10524400341B4E /* CurrentAPODView.swift */,
-				08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */,
-				08983A8F2B10FA1600A2BE79 /* FavoritesManager.swift */,
-				08A947B12B0DFC670012F3E2 /* APOD.swift */,
-				08A947B32B0DFD580012F3E2 /* APODViewModel.swift */,
+				0847BE742CE6766A00FD360B /* Views */,
+				0847BE762CE676A000FD360B /* Helpers */,
+				0847BE732CE6764D00FD360B /* Models */,
+				0847BE752CE6768E00FD360B /* ViewModels */,
 				08A9478B2B0DFA070012F3E2 /* Assets.xcassets */,
 				08A9478D2B0DFA070012F3E2 /* Preview Content */,
-				088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */,
 			);
 			path = "Daily APOD Wallpaper";
 			sourceTree = "<group>";
