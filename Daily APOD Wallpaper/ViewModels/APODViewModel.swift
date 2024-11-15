@@ -6,32 +6,41 @@
 //
 
 import Foundation
+import Combine
 
+@MainActor
 class APODViewModel: ObservableObject {
     @Published var apod: APOD?
     @Published var isLoading = false
-    private let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
+    @Published var error: Error?
+    
+    private let networkService = NetworkService.shared
     private let favoritesManager = FavoritesManager.shared
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        // Observe favorites changes
+        favoritesManager.objectWillChange
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.objectWillChange.send()
+            }
+            .store(in: &cancellables)
+    }
     
     func fetchAPOD() {
-        isLoading = true
-        let urlString = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)"
-        guard let url = URL(string: urlString) else { return }
-
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            DispatchQueue.main.async {
-                self?.isLoading = false
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    if let decodedResponse = try? decoder.decode(APOD.self, from: data) {
-                        var fetchedApod = decodedResponse
-                        // Check if fetched APOD is in favorites, then set isFavorite accordingly
-                        fetchedApod.isFavorite = self?.favoritesManager.isFavorite(apod: fetchedApod) ?? false
-                        self?.apod = fetchedApod
-                    }
-                }
+        Task {
+            isLoading = true
+            do {
+                var fetchedApod = try await networkService.fetchAPOD()
+                // Check if fetched APOD is in favorites
+                fetchedApod.isFavorite = favoritesManager.isFavorite(apod: fetchedApod)
+                apod = fetchedApod
+            } catch {
+                self.error = error
             }
-        }.resume()
+            isLoading = false
+        }
     }
     
     func toggleFavoriteStatus() {
@@ -46,6 +55,10 @@ class APODViewModel: ObservableObject {
         }
         
         apod = currentApod
+    }
+    
+    func isFavorite(apod: APOD) -> Bool {
+        favoritesManager.isFavorite(apod: apod)
     }
 }
 

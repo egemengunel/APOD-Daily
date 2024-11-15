@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = APODViewModel()
     @State private var selectedTab = 0
 
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                // Main content
                 ZStack {
                     switch selectedTab {
                     case 0:
@@ -28,7 +28,6 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                // Custom bottom navigation bar
                 HStack {
                     Spacer(minLength: geometry.size.width * 0.1)
                     BottomBarItem(
@@ -57,26 +56,13 @@ struct ContentView: View {
                 .background(Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.bottom))
             }
         }
+        .environmentObject(viewModel)
     }
 }
 
-struct BottomBarItem: View {
-    let iconName: String
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            VStack {
-                Image(systemName: iconName)
-                    .font(.system(size: 20, weight: .medium))
-                Text(title)
-                    .font(.caption)
-            }
-            .foregroundColor(isSelected ? .blue : .gray)
-        }
-    }
+#Preview {
+    ContentView()
 }
+
 
 
