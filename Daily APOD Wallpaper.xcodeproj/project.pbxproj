@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		080FAA9E2CE76C47002ED9BA /* DetailAPODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FAA9D2CE76C47002ED9BA /* DetailAPODView.swift */; };
 		080FAAA12CE76CA5002ED9BA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FAAA02CE76CA5002ED9BA /* NetworkService.swift */; };
-		080FAAA42CE76CD5002ED9BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FAAA32CE76CD5002ED9BA /* Constants.swift */; };
-		080FAAA72CE76D06002ED9BA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FAAA62CE76D06002ED9BA /* Date+Extensions.swift */; };
 		088BC48D2CD6491B00454C6E /* PreviousAPODsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */; };
 		0890549F2CE770A0000EAFA5 /* APODActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890549C2CE770A0000EAFA5 /* APODActionButtons.swift */; };
 		089054A02CE770A0000EAFA5 /* APODRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890549D2CE770A0000EAFA5 /* APODRowView.swift */; };
@@ -25,7 +23,7 @@
 		08A947A52B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947A42B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift */; };
 		08A947B22B0DFC670012F3E2 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947B12B0DFC670012F3E2 /* APOD.swift */; };
 		08A947B42B0DFD580012F3E2 /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A947B32B0DFD580012F3E2 /* APODViewModel.swift */; };
-		08DB888E2B10524400341B4E /* CurrentAPODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB888D2B10524400341B4E /* CurrentAPODView.swift */; };
+		08DB888E2B10524400341B4E /* TodaysAPODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB888D2B10524400341B4E /* TodaysAPODView.swift */; };
 		08DB88902B1052F000341B4E /* FavoritedAPODsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +47,6 @@
 /* Begin PBXFileReference section */
 		080FAA9D2CE76C47002ED9BA /* DetailAPODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPODView.swift; sourceTree = "<group>"; };
 		080FAAA02CE76CA5002ED9BA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		080FAAA32CE76CD5002ED9BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		080FAAA62CE76D06002ED9BA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAPODsView.swift; sourceTree = "<group>"; };
 		0890549C2CE770A0000EAFA5 /* APODActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APODActionButtons.swift; path = "Daily APOD Wallpaper/Views/Components/APODActionButtons.swift"; sourceTree = SOURCE_ROOT; };
 		0890549D2CE770A0000EAFA5 /* APODRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APODRowView.swift; path = "Daily APOD Wallpaper/Views/Components/APODRowView.swift"; sourceTree = SOURCE_ROOT; };
@@ -68,7 +64,7 @@
 		08A947A42B0DFA070012F3E2 /* Daily_APOD_WallpaperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_APOD_WallpaperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08A947B12B0DFC670012F3E2 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		08A947B32B0DFD580012F3E2 /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
-		08DB888D2B10524400341B4E /* CurrentAPODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAPODView.swift; sourceTree = "<group>"; };
+		08DB888D2B10524400341B4E /* TodaysAPODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysAPODView.swift; sourceTree = "<group>"; };
 		08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedAPODsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				080FAA9D2CE76C47002ED9BA /* DetailAPODView.swift */,
-				08DB888D2B10524400341B4E /* CurrentAPODView.swift */,
+				08DB888D2B10524400341B4E /* TodaysAPODView.swift */,
 				08DB888F2B1052F000341B4E /* FavoritedAPODsView.swift */,
 				088BC48C2CD6491B00454C6E /* PreviousAPODsView.swift */,
 			);
@@ -132,23 +128,6 @@
 				080FAAA02CE76CA5002ED9BA /* NetworkService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		080FAAA22CE76CB3002ED9BA /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				080FAAA52CE76CDF002ED9BA /* Extensions */,
-				080FAAA32CE76CD5002ED9BA /* Constants.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		080FAAA52CE76CDF002ED9BA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				080FAAA62CE76D06002ED9BA /* Date+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0847BE732CE6764D00FD360B /* Models */ = {
@@ -208,7 +187,6 @@
 		08A947862B0DFA050012F3E2 /* Daily APOD Wallpaper */ = {
 			isa = PBXGroup;
 			children = (
-				080FAAA22CE76CB3002ED9BA /* Utilities */,
 				080FAA9F2CE76C89002ED9BA /* Services */,
 				08CFCAA32CE67F45008537B5 /* App */,
 				0847BE742CE6766A00FD360B /* Views */,
@@ -385,11 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				080FAAA12CE76CA5002ED9BA /* NetworkService.swift in Sources */,
-				080FAAA42CE76CD5002ED9BA /* Constants.swift in Sources */,
-				08DB888E2B10524400341B4E /* CurrentAPODView.swift in Sources */,
+				08DB888E2B10524400341B4E /* TodaysAPODView.swift in Sources */,
 				088BC48D2CD6491B00454C6E /* PreviousAPODsView.swift in Sources */,
 				08A9478A2B0DFA050012F3E2 /* ContentView.swift in Sources */,
-				080FAAA72CE76D06002ED9BA /* Date+Extensions.swift in Sources */,
 				08A947B22B0DFC670012F3E2 /* APOD.swift in Sources */,
 				08983A902B10FA1600A2BE79 /* FavoritesManager.swift in Sources */,
 				0890549F2CE770A0000EAFA5 /* APODActionButtons.swift in Sources */,

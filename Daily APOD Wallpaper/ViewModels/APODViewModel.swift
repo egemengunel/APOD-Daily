@@ -28,7 +28,7 @@ class APODViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func fetchAPOD() {
+    func fetchTodaysAPOD() {
         Task {
             isLoading = true
             do {

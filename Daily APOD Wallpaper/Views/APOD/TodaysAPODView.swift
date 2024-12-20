@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct CurrentAPODView: View {
+struct TodaysAPODView: View {
     @StateObject var viewModel = APODViewModel()
     @State private var showingSaveAlert = false
     @State private var saveError: NSError?
@@ -93,7 +93,7 @@ struct CurrentAPODView: View {
             )
         }
         .onAppear {
-            viewModel.fetchAPOD()
+            viewModel.fetchTodaysAPOD()
         }
     }
 

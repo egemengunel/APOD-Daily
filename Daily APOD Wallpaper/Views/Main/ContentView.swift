@@ -10,31 +10,41 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = APODViewModel()
     @State private var selectedTab = 0
-
+    
     var body: some View {
-        GeometryReader { geometry in
             VStack(spacing: 0) {
+                //ContentArea
                 ZStack {
                     switch selectedTab {
                     case 0:
-                        CurrentAPODView()
+                        NavigationView {
+                            TodaysAPODView()
+                                .navigationBarTitleDisplayMode(.inline)
+                                .navigationTitle("Today's APOD")
+                        }
                     case 1:
                         FavoritedAPODsView()
                     case 2:
                         PreviousAPODsView()
                     default:
-                        CurrentAPODView()
+                        NavigationView {
+                            TodaysAPODView()
+                                .navigationBarTitleDisplayMode(.inline)
+                                .navigationTitle("Today's APOD")
+                        }
+                        
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 HStack {
-                    Spacer(minLength: geometry.size.width * 0.1)
+                    //Bottom tab bar
                     BottomBarItem(
                         iconName: "photo.on.rectangle.angled",
                         title: "Today",
                         isSelected: selectedTab == 0,
                         action: { selectedTab = 0 }
+                        
                     )
                     Spacer()
                     BottomBarItem(
@@ -50,19 +60,17 @@ struct ContentView: View {
                         isSelected: selectedTab == 2,
                         action: { selectedTab = 2 }
                     )
-                    Spacer(minLength: geometry.size.width * 0.1)
                 }
-                .padding(.vertical, 8)
-                .background(Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.bottom))
+                .padding(.horizontal)
+                .padding(.vertical)
+                .background(Color(UIColor.systemBackground))
             }
-        }
         .environmentObject(viewModel)
     }
 }
-
-#Preview {
-    ContentView()
-}
-
-
-
+    #Preview {
+        ContentView()
+    }
+    
+    
+ 

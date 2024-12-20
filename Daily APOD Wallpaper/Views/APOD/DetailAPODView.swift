@@ -98,3 +98,9 @@ struct DetailAPODView: View {
         }
     }
 }
+
+#Preview {
+    DetailAPODView(apod: .preview)
+}
+    
+
