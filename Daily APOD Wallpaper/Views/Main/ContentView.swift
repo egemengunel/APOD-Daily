@@ -37,7 +37,7 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                HStack {
+                HStack(spacing: 70) {
                     //Bottom tab bar
                     BottomBarItem(
                         iconName: "photo.on.rectangle.angled",
@@ -46,14 +46,12 @@ struct ContentView: View {
                         action: { selectedTab = 0 }
                         
                     )
-                    Spacer()
                     BottomBarItem(
                         iconName: "heart.fill",
                         title: "Favorites",
                         isSelected: selectedTab == 1,
                         action: { selectedTab = 1 }
                     )
-                    Spacer()
                     BottomBarItem(
                         iconName: "clock.arrow.circlepath",
                         title: "Previous",

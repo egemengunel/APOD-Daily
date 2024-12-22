@@ -46,37 +46,13 @@ struct TodaysAPODView: View {
                         .font(.body)
                         .padding(.horizontal)
 
-                    // Favorite and Share Buttons
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            viewModel.toggleFavoriteStatus()
-                        }) {
-                            Image(systemName: viewModel.apod?.isFavorite == true ? "heart.fill" : "heart")
-                                .font(.title2)
-                                .padding()
-                                .background(Color.gray.opacity(0.1))
-                                .clipShape(Circle())
-                                .foregroundColor(viewModel.apod?.isFavorite == true ? .red : .blue)
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            if let currentApod = viewModel.apod {
-                                saveImageToPhotos(url: currentApod.hdurl)
-                            }
-                        }) {
-                            Image(systemName: "square.and.arrow.up")
-                                .font(.title2)
-                                .padding()
-                                .background(Color.gray.opacity(0.1))
-                                .clipShape(Circle())
-                                .foregroundColor(.blue)
-                        }
-                        Spacer()
-                    }
-                    .padding()
+                    // Replace the existing buttons with APODActionButtons
+                    APODActionButtons(
+                        apod: apod,
+                        viewModel: viewModel,
+                        showingSaveAlert: $showingSaveAlert,
+                        saveError: $saveError
+                    )
                 } else if viewModel.isLoading {
                     ProgressView()
                 } else {
@@ -94,29 +70,6 @@ struct TodaysAPODView: View {
         }
         .onAppear {
             viewModel.fetchTodaysAPOD()
-        }
-    }
-
-    private func saveImageToPhotos(url: String) {
-        guard let imageUrl = URL(string: url),
-              let imageData = try? Data(contentsOf: imageUrl),
-              let image = UIImage(data: imageData) else {
-            self.saveError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "The image data could not be loaded."])
-            self.showingSaveAlert = true
-            return
-        }
-
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: image)
-        }) { success, error in
-            DispatchQueue.main.async {
-                if success {
-                    self.saveError = nil
-                } else {
-                    self.saveError = error as NSError?
-                }
-                self.showingSaveAlert = true
-            }
         }
     }
 }
